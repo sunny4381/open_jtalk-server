@@ -3,6 +3,10 @@ Open JTalk Server
 
 This is Japanese Voice Synthesis Server using [Open JTalk](http://open-jtalk.sourceforge.net).
 
+[![Build Status](https://travis-ci.org/sunny4381/open_jtalk-server.svg?branch=master)](https://travis-ci.org/sunny4381/open_jtalk-server)
+[![Coverage Status](https://coveralls.io/repos/sunny4381/open_jtalk-server/badge.svg?branch=master)](https://coveralls.io/r/sunny4381/open_jtalk-server?branch=master)
+[![Code Climate](https://codeclimate.com/github/sunny4381/open_jtalk-server/badges/gpa.svg)](https://codeclimate.com/github/sunny4381/open_jtalk-server)
+
 ## Installation
 
 install it yourself as:
