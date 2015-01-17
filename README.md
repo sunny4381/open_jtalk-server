@@ -3,10 +3,6 @@ Open JTalk Server
 
 This is Japanese Voice Synthesis Server using [Open JTalk](http://open-jtalk.sourceforge.net).
 
-[![Build Status](https://travis-ci.org/sunny4381/open_jtalk-ruby.svg?branch=master)](https://travis-ci.org/sunny4381/open_jtalk-ruby)
-[![Coverage Status](https://coveralls.io/repos/sunny4381/open_jtalk-ruby/badge.svg?branch=master)](https://coveralls.io/r/sunny4381/open_jtalk-ruby?branch=master)
-[![Code Climate](https://codeclimate.com/github/sunny4381/open_jtalk-ruby/badges/gpa.svg)](https://codeclimate.com/github/sunny4381/open_jtalk-ruby)
-
 ## Installation
 
 install it yourself as:
