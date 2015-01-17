@@ -1,0 +1,46 @@
+Open JTalk Server
+===
+
+This is Japanese Voice Synthesis Server using [Open JTalk](http://open-jtalk.sourceforge.net).
+
+[![Build Status](https://travis-ci.org/sunny4381/open_jtalk-ruby.svg?branch=master)](https://travis-ci.org/sunny4381/open_jtalk-ruby)
+[![Coverage Status](https://coveralls.io/repos/sunny4381/open_jtalk-ruby/badge.svg?branch=master)](https://coveralls.io/r/sunny4381/open_jtalk-ruby?branch=master)
+[![Code Climate](https://codeclimate.com/github/sunny4381/open_jtalk-ruby/badges/gpa.svg)](https://codeclimate.com/github/sunny4381/open_jtalk-ruby)
+
+## Installation
+
+install it yourself as:
+
+    $ git clone git://github.com/sunny4381/open_jtalk-server.git
+    $ cd open_jtalk-server
+    $ bundler install
+    $ bundler exec rails server
+
+Brows "http://localhost:3000/"
+
+### Supported Platform
+
+Platforma  | Support
+-----------|---------
+Windows    | NO
+Linux      | YES
+Mac        | YES
+Other Unix | Meybe YES
+
+## Contributing
+
+1. Fork it ( https://github.com/sunny4381/open_jtalk-ruby/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
+
+## License
+
+open_jtalk-server contains several sub modules, and each module has released under its own license.
+
+* open_jtalk-server is released under [BSD 2 Clause](http://opensource.org/licenses/BSD-2-Clause).
+* open_jtalk-ruby is released under [BSD 2 Clause](http://opensource.org/licenses/BSD-2-Clause).
+* open_jtalk is released under [Modified BSD license](http://www.opensource.org/).
+* hts_engine_api is released under [Modified BSD license](http://www.opensource.org/).
+* MeCab is released under [New BSD License](http://opensource.org/licenses/BSD-3-Clause).

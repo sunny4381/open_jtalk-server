@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="span12">
+    <%= form_tag synthesis_path, :method => 'get' do %>
+      <fieldset>
+        <legend>Open JTalk</legend>
+        <%= text_area_tag :text, params[:text], :placeholder => "Type something…", :rows => 10, :style => "width: 100%;" %>
+        <select name="style">
+          <option>Mei::NORMAL</option>
+          <option>Mei::ANGRY</option>
+          <option>Mei::BASHFUL</option>
+          <option>Mei::HAPPY</option>
+          <option>Mei::SAD</option>
+          <option>Mei::FAST</option>
+          <option>Mei::SLOW</option>
+          <option>Mei::HIGH</option>
+          <option>Mei::LOW</option>
+          <option>Nitech::NORMAL</option>
+          <option>Nitech::FAST</option>
+          <option>Nitech::SLOW</option>
+          <option>Nitech::HIGH</option>
+          <option>Nitech::LOW</option>
+        </select>
+        <%= submit_tag I18n.t("synthesis"), :class => "btn" %>
+      </fieldset>
+    <% end %>
+  </div>
+</div>
