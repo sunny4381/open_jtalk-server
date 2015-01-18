@@ -7,6 +7,8 @@ This is Japanese Voice Synthesis Server using [Open JTalk](http://open-jtalk.sou
 [![Coverage Status](https://coveralls.io/repos/sunny4381/open_jtalk-server/badge.svg?branch=master)](https://coveralls.io/r/sunny4381/open_jtalk-server?branch=master)
 [![Code Climate](https://codeclimate.com/github/sunny4381/open_jtalk-server/badges/gpa.svg)](https://codeclimate.com/github/sunny4381/open_jtalk-server)
 
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 ## Installation
 
 install it yourself as:
