@@ -49,4 +49,5 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'coveralls'
+  gem 'codeclimate-test-reporter', require: nil
 end

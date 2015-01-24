@@ -12,4 +12,4 @@ before_install:
   - cd /usr/lib/x86_64-linux-gnu && sudo ln -s libmp3lame.so.0.0.0 libmp3lame.so
   - popd
 script:
-  - bundle exec rspec
+  - CODECLIMATE_REPO_TOKEN=5820e7c35ae826605f6ac87c88a1cb4e8b8d26f999a81abfbbabf31d0d0a6ff1 bundle exec rspec
