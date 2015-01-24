@@ -6,7 +6,8 @@ class Preprocessor
   end
 
   def each
-    e = @text.each_line.lazy
+    e = @text.each_line
+    e = e.lazy if e.respond_to?(:lazy)
 
     # remove whites
     e = e.map do |line|
