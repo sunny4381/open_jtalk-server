@@ -5,22 +5,24 @@ class Preprocessor
     @text = text
   end
 
-  def each
+  def each(&block)
     e = @text.each_line
     e = e.lazy if e.respond_to?(:lazy)
 
     # remove whites
     e = e.map do |line|
-      line.chomp!
-      line.strip!
-      line
+      remote_whites line
     end
 
     # filter out blanks
     e = e.select(&:present?)
 
-    e.each do |line|
-      yield line
-    end
+    e.each(&block)
+  end
+
+  private
+
+  def remote_whites(line)
+    line.chomp.strip
   end
 end

@@ -8,7 +8,6 @@ class StreamingSynthesizer
     @config = config
     @text = text
     @encoder = nil
-    @pending_slice = []
   end
 
   def each
@@ -17,32 +16,30 @@ class StreamingSynthesizer
 
     e = Preprocessor.new(@text)
 
-    OpenJtalk.load(@config.to_hash) do |openjtalk|
-      e.each do |line|
+    pending_slice = OpenJtalk.load(@config.to_hash) do |openjtalk|
+      e.reduce([]) do |pending, line|
         header, pcm_data = openjtalk.synthesis(openjtalk.normalize_text(line))
 
         @encoder = self.class.create_encoder(header) unless @encoder
         frame_size = @encoder.framesize
 
-        @pending_slice += pcm_data.unpack("v*")
-        pending_slice = nil
-        @pending_slice.each_slice(frame_size) do |slice|
+        pending += pcm_data.unpack("v*")
+        pending.each_slice(frame_size).reduce do |_,slice|
           if slice.length == frame_size
             @encoder.encode_short(slice, slice) do |mp3_data|
               yield mp3_data
+              []
             end
           else
-            pending_slice = slice
+            slice
           end
         end
-
-        @pending_slice = pending_slice.present? ? pending_slice : []
       end
     end
 
     if @encoder
-      if @pending_slice.present?
-        @encoder.encode_short(@pending_slice, @pending_slice) do |mp3_data|
+      if pending_slice.present?
+        @encoder.encode_short(pending_slice, pending_slice) do |mp3_data|
           yield mp3_data
         end
       end
@@ -54,7 +51,6 @@ class StreamingSynthesizer
 
     # dispose
     @encoder = nil
-    @pending_slice = []
 
     finish_at = Time.now
     Rails.logger.info("synthesize #{@text} in #{finish_at - start_at} seconds")
