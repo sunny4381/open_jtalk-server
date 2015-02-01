@@ -14,7 +14,7 @@ class OpenJtalkController < ApplicationController
     config = param_config
 
     response.headers['Content-Type'] = 'audio/mp3'
-    self.response_body = StreamingSynthesizer.new(config, text)
+    self.response_body = OpenJtalk::Mp3StreamingSynthesizer.new(config, text)
   end
 
   private

@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/sunny4381/open_jtalk-ruby.git
-  revision: 8bdaebcc4f7394ada94a2181e6a7f63b0ee7a4c1
+  revision: 7b6f17dbc41b71545186a1ec896e9a8e941c580a
   specs:
     open_jtalk-ruby (0.7.0)
       lame (~> 0)
@@ -53,8 +53,8 @@ GEM
     coffee-script (2.3.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.8.0)
-    coveralls (0.7.3)
+    coffee-script-source (1.9.0)
+    coveralls (0.7.8)
       multi_json (~> 1.10)
       rest-client (~> 1.7)
       simplecov (~> 0.9.1)
@@ -112,7 +112,6 @@ GEM
     rainbow (2.0.0)
     rake (10.4.2)
     rdoc (4.2.0)
-      json (~> 1.4)
     ref (1.0.5)
     rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
