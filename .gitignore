@@ -116,6 +116,7 @@ pickle-email-*.html
 bower.json
 
 # other files
+,memo
 *.bundle
 *.so
 *.o
