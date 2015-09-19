@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/sunny4381/open_jtalk-ruby.git
-  revision: 7b6f17dbc41b71545186a1ec896e9a8e941c580a
+  revision: a2ac70fee0f9380c6fa8c331b2bb17f927555e31
   specs:
-    open_jtalk-ruby (0.7.0)
+    open_jtalk-ruby (0.8.0)
       lame (~> 0)
 
 GEM
