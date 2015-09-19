@@ -23,8 +23,7 @@ class OpenJtalkController < ApplicationController
     fail ActionController::ParameterMissing, :text if params.blank?
 
     text = params[:text]
-    fail ActionController::ParameterMissing, :text if text.blank?
-    text.gsub!(/\r\n|\r/, "\n")
+    fail ActionController::ParameterMissing, :text if text.nil?
     text
   end
 
